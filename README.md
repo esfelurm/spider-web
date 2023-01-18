@@ -16,3 +16,15 @@ blake5b
 <li> Cracker of blogfa accounts </li>
 <li> Bypassing sqli and xss bugs </li>
 
+<h3>Installation instructions on Linux and Thermox </h3>
+
+``` 
+git clone https://github.com/esfelurm/spider-web
+
+cd spider-web
+
+python spider-web.py```
+
+<li> The tool is being updated </li>
+
+

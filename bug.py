@@ -47,7 +47,7 @@ def SQLI():
         else:
             pass
 def xss():
-    print ("""
+    print (f"""
 {lrd}
 :::    :::  ::::::::   ::::::::  
 :+:    :+: :+:    :+: :+:    :+: 

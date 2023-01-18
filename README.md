@@ -23,7 +23,8 @@ git clone https://github.com/esfelurm/spider-web
 
 cd spider-web
 
-python spider-web.py```
+python spider-web.py
+```
 
 <li> The tool is being updated </li>
 

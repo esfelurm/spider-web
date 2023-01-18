@@ -91,27 +91,27 @@ payload = {
 }
 if method == "1":
         for i in range(int(number)):
-                method1 = requests.post("http://www.blogfa.com/report-abuse",data=payload, headers=users)
+                method1 = requests.post("http://www.blogfa.com/report-abuse",data=payload)
                 print (f"{yw}[{lrd}SENT{yw}] {lgn}The report has been sent to the site! Report type: {lrd}[{yw}Contains immoral and obscene images or texts{lrd}] Number of reports so far : ",i)
 
 elif method == "2":
         for i in range(int(number)):
-                method2 = requests.post("http://www.blogfa.com/report-abuse",data=payload, headers=users)
+                method2 = requests.post("http://www.blogfa.com/report-abuse",data=payload)
                 print (f"{yw}[{lrd}SENT{yw}] {lgn}The report has been sent to the site! Report type: {lrd}[{yw}spam, contentless or..{lrd}] Number of reports so far : ",i)
 
 elif method == "3":
         for i in range(int(number)):
-                method3 = requests.post("http://www.blogfa.com/report-abuse",data=payload, headers=users)
+                method3 = requests.post("http://www.blogfa.com/report-abuse",data=payload)
                 print (f"{yw}[{lrd}SENT{yw}] {lgn}The report has been sent to the site! Report type: {lrd}[{yw}people, authorities, religions and racial or...{lrd}] Number of reports so far : ",i)
 
 elif method == "4":
         for i in range(int(number)):
-                method4 = requests.post("http://www.blogfa.com/report-abuse",data=payload, headers=users)
+                method4 = requests.post("http://www.blogfa.com/report-abuse",data=payload)
                 print (f"{yw}[{lrd}SENT{yw}] {lgn}The report has been sent to the site! Report type: {lrd}[{yw}Disclosure of information or private images of people{lrd}] Number of reports so far : ",i)
 
 elif method == "8":
         for i in range(int(number)):
-                method9 = requests.post("http://www.blogfa.com/report-abuse",data=payload, headers=users)
+                method9 = requests.post("http://www.blogfa.com/report-abuse",data=payload)
                 print ("{yw}[{lrd}SENT{yw}] {lgn}The report has been sent to the site! Report type: {lrd}[{yw}Other cases{lrd}] Number of reports so far : ",i)
                 
 else:

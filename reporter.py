@@ -116,6 +116,4 @@ elif method == "8":
                 
 else:
     print ("ERROR NUMBER ")
-    
-time.sleep(15)
-os.system("python spider-web.py")                             
+                              

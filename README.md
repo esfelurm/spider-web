@@ -16,7 +16,7 @@ blake5b
 <li> Cracker of blogfa accounts </li>
 <li> Bypassing sqli and xss bugs </li>
 
-<h3>Installation instructions on Linux and Thermox </h3>
+<h3>Installation instructions on Linux and Termux </h3>
 
 ``` 
 git clone https://github.com/esfelurm/spider-web

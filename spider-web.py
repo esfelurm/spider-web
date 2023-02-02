@@ -68,7 +68,7 @@ def banner():
                {lrd}[{yw}3{lrd}]{lgn} Admin Panel finder and sub			        {lrd}[{yw}4{lrd}]{lgn} Reporter Blogfa						
                
               
-              		                             {lrd}[{yw}5{lrd}]{lgn} cracker Blogfa 					
+               {lrd}[{yw}5{lrd}]{lgn} Reporter Aparat            		                             {lrd}[{yw}6{lrd}]{lgn} cracker Blogfa 					
                
                					
                                                   
@@ -152,8 +152,10 @@ if Number == '3':
     admin_pabel()
 elif Number == '1':
     os.system("python cracker-hash.py")
-elif Number == '5':
+elif Number == '6':
     os.system("python cracker-blogfa.py")
+elif Number == '5':
+    os.system("pip install reporter-aparat.py")
 elif Number == '4':
     os.system("python reporter.py")	
 elif Number == '2':

@@ -13,6 +13,7 @@ blake2b
 blake5b 
 <li> Find admin panel and subdomains </li>
 <li> Reporter of blogfa sites with different user agents </li>
+<li> Reporter Aparat </li>
 <li> Cracker of blogfa accounts </li>
 <li> Bypassing sqli and xss bugs </li>
 <h3> Tool screenshot </h3>

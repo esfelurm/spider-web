@@ -3,21 +3,21 @@
 A tool for web attacks and bug bunties 
 
 <li> crack hash <li>
-md5
+md5<br/>
 ____________________<br/>
-sha1
+sha1<br/>
+____________________<br/>
+sha224<br/>
 ____________________<br\>
-sha224
-____________________<br\>
-sha256
-____________________<br\>
-sha384
-____________________<br\>
-sha512
-____________________<br\>
-blake2b
-____________________<br\>
-blake5b 
+sha256<br/>
+____________________<br/>
+sha384<br/>
+____________________<br/>
+sha512<br/>
+____________________<br/>
+blake2b<br/>
+____________________<br/>
+blake5b<br/> 
 <li> Find admin panel and subdomains </li>
 --------------------
 <li> Reporter of blogfa sites with different user agents </li>

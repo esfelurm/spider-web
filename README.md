@@ -4,7 +4,7 @@ A tool for web attacks and bug bunties
 
 <li> crack hash <li>
 md5
-____________________<br\>
+____________________<br/>
 sha1
 ____________________<br\>
 sha224

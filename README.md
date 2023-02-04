@@ -4,19 +4,19 @@ A tool for web attacks and bug bunties
 
 <li> crack hash <li>
 md5
---------------------
+____________________<br\>
 sha1
---------------------
+____________________<br\>
 sha224
---------------------
+____________________<br\>
 sha256
---------------------
+____________________<br\>
 sha384
---------------------
+____________________<br\>
 sha512
---------------------
+____________________<br\>
 blake2b
---------------------
+____________________<br\>
 blake5b 
 <li> Find admin panel and subdomains </li>
 --------------------
@@ -31,7 +31,6 @@ blake5b
 <h3> Tool screenshot </h3>
 <a href="https://t.me/esfelurm" target="_blank"><img src="https://s2.uupload.ir/files/img_20230118_120030_648_sgys.jpg" border="0"/></a>
 <h3>Installation instructions on Linux and Termux </h3>
---------------------
 ``` 
 git clone https://github.com/esfelurm/spider-web
 

@@ -2,7 +2,7 @@
 
 A tool for web attacks and bug bunties 
 
-<li> crack hash <li>
+<li> crack hash <li/>
 ____________________<br/>
 md5<br/>
 ____________________<br/>

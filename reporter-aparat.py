@@ -78,7 +78,7 @@ agent_user = [
             ]
 
 users = (random.choice(agent_user))
-header = {'Allow': 'GET, HEAD, OPTIONS, TRACE',
+header = {'User-Agent': users,'Allow': 'GET, HEAD, OPTIONS, TRACE',
  'Content-Type': 'text/html',
  'Server': 'Microsoft-IIS/8.5',
  'X-Powered-By': 'ARR/3.0, ASP.NET',

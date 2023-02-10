@@ -2,6 +2,7 @@ import os
 import time
 import sys,os
 os.system("pip install itertools")
+os.system("pip install pyuseragents")
 import requests as req
 import pyuseragents as a
 rd, gn, lgn, yw, lrd, be, pe = '\033[00;31m', '\033[00;32m', '\033[01;32m', '\033[01;33m', '\033[01;31m', '\033[00;34m', '\033[01;35m'

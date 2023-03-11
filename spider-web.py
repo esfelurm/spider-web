@@ -114,9 +114,9 @@ def admin_pabel():
 	    sys.exit()
 	method = input(f"""
 	{yw}-------------------------------
-	{lrd}1- {lgn}search subdomains
+	{lrd}A- {lgn}search subdomains
 	
-	{lrd}2-{lgn} search admin panel
+	{lrd}َE-{lgn} search admin panel
 	
 		
 		{lrd}[{yw}N{lrd}] Number method : {pe}""")

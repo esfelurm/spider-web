@@ -142,7 +142,7 @@ elif Number == '1':
 elif Number == '6':
     os.system("python cracker-blogfa.py")
 elif Number == '5':
-    os.system("python install reporter-aparat.py")
+    os.system("python reporter-aparat.py")
 elif Number == '4':
     os.system("python reporter.py")	
 elif Number == '2':

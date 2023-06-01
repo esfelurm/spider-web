@@ -125,15 +125,15 @@ def admin_pabel():
 		for List in link_list:
 		    f = target+'/'+List
 		    req = requests.get(f)
-		    if '404' in req.text: print (f'{lrd}[{lgn}OK{lrd}]{lgn} Page found : {lrd}[ {lgn}{target}{List}{lrd} ]')
-		    else: print (f'{lrd}[{yw}NO{lrd}] {lrd}Page not found : {lrd}[ {rd}{target}{List}{lrd} ]')
+		    if '404' in req.text: print (f'{lrd}[{lgn}OK{lrd}]{lgn} Page found : {lrd}[ {lgn}{target}/{List}{lrd} ]')
+		    else: print (f'{lrd}[{yw}NO{lrd}] {lrd}Page not found : {lrd}[ {rd}{target}/{List}{lrd} ]')
 	if method == 'e' or method == 'E':
 		link_list= open('pa.txt', 'r').read().split()
 		for List in link_list:
 		    s = target+'/'+List
 		    req = requests.get(s)
-		    if '404' in req.text: print (f'{lrd}[{lgn}OK{lrd}]{lgn} Page found : {lrd}[ {lgn}{target}{List}{lrd} ]')
-		    else: print (f'{lrd}[{yw}NO{lrd}] {lrd}Page not found : {lrd}[ {rd}{target}{List}{lrd} ]')
+		    if '404' in req.text: print (f'{lrd}[{lgn}OK{lrd}]{lgn} Page found : {lrd}[ {lgn}{target}/{List}{lrd} ]')
+		    else: print (f'{lrd}[{yw}NO{lrd}] {lrd}Page not found : {lrd}[ {rd}{target}/{List}{lrd} ]')
 		    
 if Number == '3':
     admin_pabel()

@@ -42,6 +42,9 @@ cd spider-web
 python spider-web.py
 ```
 --------------------
+
+<a href="https://github.com/esfelurm/google-hacking">Google Hacking</a>
+
 <li> The tool is being updated </li>
 
 
